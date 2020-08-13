@@ -1,0 +1,6 @@
+[deps]
+LazySets = "b4f0291d-fe17-52bc-9479-3d1a343d9043"
+MAT = "23992714-dd62-5051-b70f-ba57cb901cac"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+Trixi = "a7f1ee26-1774-49b1-8366-f1abc58fbfcb"
