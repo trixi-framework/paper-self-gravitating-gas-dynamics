@@ -52,6 +52,16 @@ use the implementations provided here, please cite this repository as
 }
 ```
 
+
+## Numerical experiments
+
+The numerical experiments presented in the paper use [Trixi.jl](https://github.com/trixi-framework/Trixi.jl),
+flexible tree-based numerical simulation framework for PDEs written in Julia. To reproduce the numerical
+experiments, you need to install [Julia](https://julialang.org/).
+
+The subfolders of this repository contain README.md files with instructions to reproduce the numerical
+experiments, including postprocessing.
+
 The numerical experiments were carried out using Julia v1.5.0.
 The MATLAB scripts were executed using MATLAB R2018a.
 
