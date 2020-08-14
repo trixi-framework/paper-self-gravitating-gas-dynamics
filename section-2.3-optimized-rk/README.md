@@ -6,7 +6,7 @@ and `RK-opt/RK-coeff-opt` added to the path of MATLAB.
 
 1. Generate the spectrum of the hyperbolic diffusion problem by running the Jupyter notebook `spectrum_Trixi.ipynb`.
 2. Optimize stability polynomials by running `optimize_stability_polynomials.m` in MATLAB.
-3. Optimize stability polynomials by running `optimize_RK_schemes.m` in MATLAB.
+3. Optimize Runge-Kutta methods by running `optimize_RK_schemes.m` in MATLAB.
    You should get files with names similar to [3Sstar-2-5_2020-08-13T09-04-19.txt](3Sstar-2-5_2020-08-13T09-04-19.txt),
    depending on the time of execution. You will probably get different coefficients, since the global optimization
    problem relies on randomly distributed starting points.
