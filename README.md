@@ -40,14 +40,14 @@ If you find these results useful, please cite the article mentioned above. If yo
 use the implementations provided here, please cite this repository as
 ```
 @misc{schlottke2020purelyRepro,
-  title={{trixi\_euler\_gravity\_repro}.
+  title={{repro-self-gravitating-gas-dynamics}.
          {A} purely hyperbolic discontinuous {G}alerkin approach for
          self-gravitating gas dynamics},
   author={Schlottke-Lakemper, Michael and Winters, Andrew R and
           Ranocha, Hendrik and Gassner, Gregor},
   year={2020},
   month={08},
-  howpublished={\url{https://github.com/trixi-framework/trixi_euler_gravity_repro}},
+  howpublished={\url{https://github.com/trixi-framework/repro-self-gravitating-gas-dynamics}},
   doi={TODO}
 }
 ```
