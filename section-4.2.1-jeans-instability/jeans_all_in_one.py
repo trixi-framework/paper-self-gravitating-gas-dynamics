@@ -15,14 +15,12 @@ matplotlib.rcParams['text.latex.preamble']=[r"\usepackage{amsmath}"]
 
 fig = figure(1, figsize=(15,12))
 
-# load data for plotting
+# load data
 
 exact_ke = loadtxt('E_kin.txt')
 exact_ie = loadtxt('E_int.txt')
 exact_pe = loadtxt('E_pot.txt')
-# approxiamte solution data file name is given by the user, e.g,
-# ./jeans_all_in_one analysis.dat
-computed = loadtxt(sys.argv[1])
+computed = loadtxt(sys.argv[1]) # input by user
 
 # values necessary to scale the time by the frequency \omega
 
@@ -52,7 +50,10 @@ omega = sqrt(c0*c0*k2 - 4.0*pi*G*rho0)
 
 # setup the four axis parts
 
-axs = fig.subplots(3,sharex=True)
+#axs = fig.subplots(3)
+axs = fig.subplots(3,sharex=True) # share x axis??
+
+# set polynomial order string in one place
 
 # labels
 axs[0].set_ylabel('$E_{\\mathtt{kin}}$',fontsize=28)
@@ -70,7 +71,7 @@ axs[0].yaxis.grid(color='gray', linestyle='-',alpha=0.2,which='major')
 extract  = array([[exact_ke[i][0],exact_ke[i][1]] for i in range(len(exact_ke))])
 axs[0].plot(extract[:,0], extract[:,1],'-',linewidth=1.25,color='black',label='exact')
 kin_en = array([[omega*computed[i][1],computed[i][13]] for i in range(len(computed))])
-axs[0].plot(kin_en[:,0], kin_en[:,1],'-->',markersize=6.0,linewidth=1.25,markevery=2,color='red',label='$E_{\\mathtt{kin}}$')
+axs[0].plot(kin_en[:,0], kin_en[:,1],'-->',markersize=6.0,linewidth=1.25,markevery=2,color='red')
 
 axs[0].axis([0,80,0.0,6.25])
 axs[0].xaxis.set_ticks(range(0, 85, 5))
@@ -87,7 +88,7 @@ axs[1].yaxis.grid(color='gray', linestyle='-',alpha=0.2,which='major')
 extract  = array([[exact_ie[i][0],exact_ie[i][1]] for i in range(len(exact_ie))])
 axs[1].plot(extract[:,0], extract[:,1],'-',linewidth=1.25,color='black',label='exact')
 int_en = array([[omega*computed[i][1],computed[i][14] - computed[0][14]] for i in range(len(computed))])
-axs[1].plot(int_en[:,0], int_en[:,1] - int_en[0,1],'--o',markersize=6.0,linewidth=1.25,markevery=2,color='green',label=order)
+axs[1].plot(int_en[:,0], int_en[:,1] - int_en[0,1],'--o',markersize=6.0,linewidth=1.25,markevery=2,color='green')
 
 axs[1].axis([0,80,int_en[0,1]-6.5,int_en[0,1]])
 axs[1].xaxis.set_ticks(range(0, 85, 5))
@@ -104,7 +105,7 @@ axs[2].yaxis.grid(color='gray', linestyle='-',alpha=0.2,which='major')
 extract  = array([[exact_pe[i][0],exact_pe[i][1]] for i in range(len(exact_ie))])
 axs[2].plot(extract[:,0], extract[:,1],'-',linewidth=1.25,color='black',label='exact')
 pot_en = array([[omega*computed[i][1],computed[i][15]] for i in range(len(computed))])
-axs[2].plot(pot_en[:,0], pot_en[:,1],'--v',markersize=6.0,linewidth=1.25,markevery=2,color='blue',label=order)
+axs[2].plot(pot_en[:,0], pot_en[:,1],'--v',markersize=6.0,linewidth=1.25,markevery=2,color='blue')
 
 axs[2].axis([0,80,-0.61,0.0])
 axs[2].xaxis.set_ticks(range(0, 85, 5))
