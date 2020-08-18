@@ -9,7 +9,7 @@ This repository contains some code used in the article
   title={A purely hyperbolic discontinuous {G}alerkin approach for
          self-gravitating gas dynamics},
   author={Schlottke-Lakemper, Michael and Winters, Andrew R and
-          Ranocha, Hendrik and Gassner, Gregor},
+          Ranocha, Hendrik and Gassner, Gregor J},
   year={2020},
   month={08},
   eprint={2008.TODO},
@@ -44,7 +44,7 @@ use the implementations provided here, please cite this repository as
          {A} purely hyperbolic discontinuous {G}alerkin approach for
          self-gravitating gas dynamics},
   author={Schlottke-Lakemper, Michael and Winters, Andrew R and
-          Ranocha, Hendrik and Gassner, Gregor},
+          Ranocha, Hendrik and Gassner, Gregor J},
   year={2020},
   month={08},
   howpublished={\url{https://github.com/trixi-framework/repro-self-gravitating-gas-dynamics}},
