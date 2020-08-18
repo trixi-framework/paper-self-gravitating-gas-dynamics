@@ -14,19 +14,19 @@ julia> using Trixi
 
 julia> const TRIXI_DIR = pathof(Trixi) |> dirname |> dirname
 
-julia> const EXAMPLE_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "repro-self-gravitating-gas-dynamics")
+julia> const EXAMPLES_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "repro-self-gravitating-gas-dynamics")
 ```
 After that, you can generate the Sedov self gravity data for the figures by running the following code in the Julia REPL.
 
 ## Sec. 4.2.2, Table 6, Sedov + gravity, performance uniform vs. AMR
 **AMR mesh:**
 ```julia
-julia> Trixi.run(joinpath(EXAMPLE_DIR, "parameters_sedov_self_gravity.toml"))
+julia> Trixi.run(joinpath(EXAMPLES_DIR, "parameters_sedov_self_gravity.toml"))
 ```
 
 **Uniform mesh:**
 ```julia
-julia> Trixi.run(joinpath(EXAMPLE_DIR, "parameters_sedov_self_gravity.toml"),
+julia> Trixi.run(joinpath(EXAMPLES_DIR, "parameters_sedov_self_gravity.toml"),
                  amr_interval=0)
 ```
 

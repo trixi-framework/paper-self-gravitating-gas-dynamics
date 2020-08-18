@@ -12,7 +12,7 @@ julia> Pkg.instantiate()
 
 julia> using Trixi
 
-julia> const EXAMPLE_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "repro-self-gravitating-gas-dynamics")
+julia> const EXAMPLES_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "repro-self-gravitating-gas-dynamics")
 ```
 After that, you can reproduce the Jeans instability data by running the following code in the Julia REPL.
 Note that the analysis interval is set to 1 in order to generate enough data for smoother plots.
@@ -20,13 +20,13 @@ Note that the analysis interval is set to 1 in order to generate enough data for
 
 ## Sec. 4.2.1, Figure 3, Jeans test with gravity updated every Euler RK stage
 ```julia
-julia> Trixi.run(joinpath(EXAMPLE_DIR, "parameters_jeans_instability.toml",
+julia> Trixi.run(joinpath(EXAMPLES_DIR, "parameters_jeans_instability.toml",
                  analysis_interval=1)
 ```
 
 ## Sec. 4.2.1, Figure 4, Jeans test with gravity updated every Euler RK time step
 ```julia
-julia> Trixi.run(joinpath(EXAMPLE_DIR, "parameters_jeans_instability.toml",
+julia> Trixi.run(joinpath(EXAMPLES_DIR, "parameters_jeans_instability.toml",
                  analysis_interval=1,
                  update_gravity_once_per_stage=false)
 ```
