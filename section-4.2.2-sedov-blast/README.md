@@ -14,7 +14,7 @@ julia> using Trixi
 
 julia> const TRIXI_DIR = pathof(Trixi) |> dirname |> dirname
 
-julia> const EXAMPLES_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "repro-self-gravitating-gas-dynamics")
+julia> const EXAMPLES_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "paper-self-gravitating-gas-dynamics")
 ```
 After that, you can generate the Sedov self gravity data for the figures by running the following code in the Julia REPL.
 
