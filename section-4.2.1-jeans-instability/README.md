@@ -12,7 +12,7 @@ julia> Pkg.instantiate()
 
 julia> using Trixi
 
-julia> const EXAMPLES_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "repro-self-gravitating-gas-dynamics")
+julia> const EXAMPLES_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "paper-self-gravitating-gas-dynamics")
 ```
 After that, you can reproduce the Jeans instability data by running the following code in the Julia REPL.
 Note that the analysis interval is set to 1 in order to generate enough data for smoother plots.

@@ -12,7 +12,7 @@ julia> Pkg.instantiate()
 
 julia> using Trixi
 
-julia> const EXAMPLES_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "repro-self-gravitating-gas-dynamics")
+julia> const EXAMPLES_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "paper-self-gravitating-gas-dynamics")
 ```
 After that, you can reproduce the convergence experiments by running the following code in the Julia REPL.
 
