@@ -28,7 +28,10 @@ julia> Trixi.run("parameters_jeans_instability.toml", analysis_interval=1,
 ```
 
 Note that the analysis interval is set to 1 in order to generate enough data for smoother plots.
-For either run you generate the figure using the Python script `jeans_all_in_one.py`.
+For either run you generate the figure using the Python script `jeans_all_in_one.py`:
+```bash
+./jeans_all_in_one.py analysis.dat
+```
 This script accesses the precomputed exact energy profiles stored in `E_kin.txt`,
 `E_int.txt` and `E_pot.txt` and creates a plot saved as a PDF.
 
