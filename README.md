@@ -3,6 +3,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/TODO.svg)](https://doi.org/TODO)
 
+<p align="center">
+  <img width="662px" src="assets/sedov-rho-phi-mesh.gif"
+        alt="Simulation of self-gravitating Sedov blast wave with adaptive mesh refinement."/>
+  <br />
+  <i>Simulation of self-gravitating Sedov blast wave with adaptive mesh refinement.</i>
+</p>
+
+
 This repository contains some code used in the article
 ```
 @online{schlottke2020purely,
