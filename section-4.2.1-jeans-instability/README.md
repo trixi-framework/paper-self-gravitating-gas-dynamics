@@ -11,26 +11,39 @@ julia> Pkg.activate("..")
 julia> Pkg.instantiate()
 
 julia> using Trixi
-
-julia> const EXAMPLES_DIR = joinpath(pathof(Trixi) |> dirname |> dirname, "examples", "paper-self-gravitating-gas-dynamics")
 ```
 After that, you can reproduce the Jeans instability data by running the following code in the Julia REPL.
-Note that the analysis interval is set to 1 in order to generate enough data for smoother plots.
 
 
-## Sec. 4.2.1, Figure 3, Jeans test with gravity updated every Euler RK stage
+## Sec. 4.2.1, Figures 3 and 4, Jeans instability simulation
+**Fig. 3: Jeans test with gravity updated every Euler RK stage:**
 ```julia
-julia> Trixi.run(joinpath(EXAMPLES_DIR, "parameters_jeans_instability.toml",
-                 analysis_interval=1)
+julia> Trixi.run("parameters_jeans_instability.toml", analysis_interval=1)
 ```
 
-## Sec. 4.2.1, Figure 4, Jeans test with gravity updated every Euler RK time step
+**Fig. 4: Jeans test with gravity updated every Euler RK time step:**
 ```julia
-julia> Trixi.run(joinpath(EXAMPLES_DIR, "parameters_jeans_instability.toml",
-                 analysis_interval=1,
+julia> Trixi.run("parameters_jeans_instability.toml", analysis_interval=1,
                  update_gravity_once_per_stage=false)
 ```
 
-For either run you generate the figure using the python script `jeans_all_in_one.py`.
-This script accesses the precomuted exact energy profiles stored in `E_kin.txt`,
-`E_int.txt` and `E_pot.txt` and creates a plot saved as a pdf.
+Note that the analysis interval is set to 1 in order to generate enough data for smoother plots.
+For either run you generate the figure using the Python script `jeans_all_in_one.py`:
+```bash
+./jeans_all_in_one.py analysis.dat
+```
+This script accesses the precomputed exact energy profiles stored in `E_kin.txt`,
+`E_int.txt` and `E_pot.txt` and creates a plot saved as a PDF.
+
+
+## Sec. 4.2.1, Figures 5, Jeans test gravity sub-cycle distribution
+**Fig. 5a:**
+```julia
+Trixi.run("parameters_jeans_instability.toml")
+```
+
+**Fig. 5b:**
+```julia
+Trixi.run("parameters_jeans_instability.toml",
+          time_integration_scheme_gravity="timestep_gravity_erk52_3Sstar!", cfl_gravity=1.2)
+```
