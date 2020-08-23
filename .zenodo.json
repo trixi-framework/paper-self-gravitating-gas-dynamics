@@ -1,7 +1,7 @@
 {
     "description": "A purely hyperbolic discontinuous Galerkin approach for self-gravitating gas dynamics",
     "license": "MIT",
-    "title": "trixi-framework/paper-self-gravitating-gas-dynamics",
+    "title": "Self-gravitating gas dynamics simulations with Trixi.jl",
     "upload_type": "software",
     "creators": [
         {
