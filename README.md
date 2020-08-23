@@ -1,7 +1,7 @@
 # A purely hyperbolic discontinuous Galerkin approach for self-gravitating gas dynamics
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/TODO.svg)](https://doi.org/TODO)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3996575.svg)](https://doi.org/10.5281/zenodo.3996575)
 
 <p align="center">
   <img width="662px" src="assets/sedov-rho-phi-mesh.gif"
@@ -36,7 +36,7 @@ use the implementations provided here, please **also** cite this repository as
   year={2020},
   month={08},
   howpublished={\url{https://github.com/trixi-framework/paper-self-gravitating-gas-dynamics}},
-  doi={TODO}
+  doi={10.5281/zenodo.3996575}
 }
 ```
 
