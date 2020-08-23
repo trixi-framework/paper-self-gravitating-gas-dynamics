@@ -119,9 +119,9 @@ version = "0.5.6"
 
 [[Trixi]]
 deps = ["HDF5", "LinearMaps", "Pkg", "Printf", "Profile", "Random", "StaticArrays", "TimerOutputs", "UnPack"]
-git-tree-sha1 = "4b20041a6ca4477c2959d4feb3ecae4b21ab4347"
+git-tree-sha1 = "44fdb75aa5e23a38d13a9c91476cf861bc557757"
 uuid = "a7f1ee26-1774-49b1-8366-f1abc58fbfcb"
-version = "0.1.1"
+version = "0.1.2"
 
 [[UUIDs]]
 deps = ["Random", "SHA"]
