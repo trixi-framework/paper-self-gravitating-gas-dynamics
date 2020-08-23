@@ -30,9 +30,7 @@ If you find these results useful, please cite the article mentioned above. If yo
 use the implementations provided here, please **also** cite this repository as
 ```
 @misc{schlottkelakemper2020purelyRepro,
-  title={{paper-self-gravitating-gas-dynamics}.
-         {A} purely hyperbolic discontinuous {G}alerkin approach for
-         self-gravitating gas dynamics},
+  title={Self-gravitating gas dynamics simulations with {T}rixi.jl},
   author={Schlottke-Lakemper, Michael and Winters, Andrew R and
           Ranocha, Hendrik and Gassner, Gregor J},
   year={2020},
@@ -48,7 +46,7 @@ use the implementations provided here, please **also** cite this repository as
 One of the challenges when simulating astrophysical flows with self-gravity is to compute the
 gravitational forces. In contrast to the hyperbolic hydrodynamic equations, the gravity field is
 described by an elliptic Poisson equation. We present a purely hyperbolic approach by reformulating
-the elliptic problem into a hyperbolic diffusion problem, which is solved in pseudotime 
+the elliptic problem into a hyperbolic diffusion problem, which is solved in pseudotime
 using the same explicit high-order discontinuous Galerkin method we use for the flow solution. The
 flow and the gravity solvers operate on a joint hierarchical Cartesian mesh and are two-way coupled
 via the source terms. A key benefit of our approach is that it allows the reuse of existing
