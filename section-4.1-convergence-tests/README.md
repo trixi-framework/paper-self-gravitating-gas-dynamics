@@ -57,6 +57,6 @@ julia> Trixi.convtest("parameters_eoc_test_coupled_euler_gravity.toml", 4, N=4)
 ## Sec. 4.1.3, Table 5, EOC tests coupled Euler-gravity (update gravity once per step)
 
 ```julia
-julia> Trixi.convtest("parameters_coupling_convergence_test.toml", 4,
+julia> Trixi.convtest("parameters_eoc_test_coupled_euler_gravity.toml", 4,
                       update_gravity_once_per_stage=false)
 ```
