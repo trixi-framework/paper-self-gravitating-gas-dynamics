@@ -6,6 +6,7 @@ matplotlib.use('Agg')
 from matplotlib import rc
 from numpy import *
 from matplotlib.pyplot import *
+import os
 import sys
 
 rc('text', usetex=True)
@@ -17,9 +18,10 @@ fig = figure(1, figsize=(15,12))
 
 # load data
 
-exact_ke = loadtxt('E_kin.txt')
-exact_ie = loadtxt('E_int.txt')
-exact_pe = loadtxt('E_pot.txt')
+script_dir = os.path.dirname(os.path.realpath(__file__))
+exact_ke = loadtxt(os.path.join(script_dir, 'E_kin.txt'))
+exact_ie = loadtxt(os.path.join(script_dir, 'E_int.txt'))
+exact_pe = loadtxt(os.path.join(script_dir, 'E_pot.txt'))
 computed = loadtxt(sys.argv[1]) # input by user
 
 # values necessary to scale the time by the frequency \omega
