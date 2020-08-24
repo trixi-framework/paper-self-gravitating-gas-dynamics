@@ -39,11 +39,11 @@ This script accesses the precomputed exact energy profiles stored in `E_kin.txt`
 ## Sec. 4.2.1, Figures 5, Jeans test gravity sub-cycle distribution
 **Fig. 5a:**
 ```julia
-Trixi.run("parameters_jeans_instability.toml")
+julia> Trixi.run("parameters_jeans_instability.toml")
 ```
 
 **Fig. 5b:**
 ```julia
-Trixi.run("parameters_jeans_instability.toml",
-          time_integration_scheme_gravity="timestep_gravity_erk52_3Sstar!", cfl_gravity=1.2)
+julia> Trixi.run("parameters_jeans_instability.toml",
+                 time_integration_scheme_gravity="timestep_gravity_erk52_3Sstar!", cfl_gravity=1.2)
 ```
