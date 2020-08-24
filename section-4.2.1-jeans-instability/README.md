@@ -27,13 +27,13 @@ julia> Trixi.run("parameters_jeans_instability.toml", analysis_interval=1,
                  update_gravity_once_per_stage=false)
 ```
 
-Note that the analysis interval is set to 1 in order to generate enough data for smoother plots.
+Note that the analysis interval is set to one to generate enough data for smoother plots.
 For either run you generate the figure using the Python script `jeans_all_in_one.py`:
 ```bash
-./jeans_all_in_one.py analysis.dat
+./jeans_all_in_one.py out/analysis.dat
 ```
 This script accesses the precomputed exact energy profiles stored in `E_kin.txt`,
-`E_int.txt` and `E_pot.txt` and creates a plot saved as a PDF.
+`E_int.txt` and `E_pot.txt` and creates a plot saved as a PDF `test.pdf`.
 
 
 ## Sec. 4.2.1, Figures 5, Jeans test gravity sub-cycle distribution
