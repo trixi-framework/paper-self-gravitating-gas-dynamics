@@ -12,7 +12,7 @@ julia> Pkg.instantiate()
 
 julia> using Trixi
 
-julia> const TRIXI_DIR = pathof(Trixi) |> dirname |> dirname # Only required for postprocessing
+julia> const TRIXI_DIR = pathof(Trixi) |> dirname |> dirname
 ```
 After that, you can generate the Sedov self gravity data for the figures by running the following code in the Julia REPL.
 
@@ -62,7 +62,27 @@ julia> Trixi.run(parameters_sedov_self_gravity.toml", amr_interval=0)
 ```
 
 ## Converting Trixi.jl's .h5 files to VTK/VTI
-To postprocess the solution files use
+To postprocess the solution files, you first need to manually install some
+dependencies. Start a fresh Julia REPL and execute the following commands (only
+required *once*):
+```julia
+julia> import Pkg
+
+julia> Pkg.add("ArgParse")
+
+julia> Pkg.add("HDF5")
+
+julia> Pkg.add("TimerOutputs")
+
+julia> Pkg.add("WriteVTK")
+
+julia> Pkg.add("ProgressMeter")
+```
+
+When working with the postprocessing tools, start Julia und load Trixi.jl
+with the same startup sequence as [above](#sedov-blast-wave-with-self-gravity).
+You can then convert the HDF5 output files of Trixi.jl to VTK-compatible file by
+switching to shell mode (enter `;`) and running
 ```julia
 shell> $TRIXI_DIR/postprocessing/trixi2vtk --nvisnodes 8 --format vti out/solution_euler_000000.h5
 
