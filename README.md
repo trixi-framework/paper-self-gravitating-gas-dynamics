@@ -11,8 +11,9 @@
 </p>
 
 
-This repository contains information and code to reproduce the results presented in the article
-```
+This repository contains information and code to reproduce the results presented in the
+[article](https://arxiv.org/abs/2008.10593)
+```bibtex
 @online{schlottkelakemper2020purely,
   title={A purely hyperbolic discontinuous {G}alerkin approach for
          self-gravitating gas dynamics},
@@ -28,7 +29,7 @@ This repository contains information and code to reproduce the results presented
 
 If you find these results useful, please cite the article mentioned above. If you
 use the implementations provided here, please **also** cite this repository as
-```
+```bibtex
 @misc{schlottkelakemper2020purelyRepro,
   title={Self-gravitating gas dynamics simulations with {T}rixi.jl},
   author={Schlottke-Lakemper, Michael and Winters, Andrew R and
