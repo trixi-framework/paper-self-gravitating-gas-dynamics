@@ -20,7 +20,7 @@ This repository contains information and code to reproduce the results presented
           Ranocha, Hendrik and Gassner, Gregor J},
   year={2020},
   month={08},
-  eprint={2008.TODO},
+  eprint={2008.10593},
   eprinttype={arXiv},
   eprintclass={math.NA}
 }
